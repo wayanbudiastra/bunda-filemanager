@@ -1,6 +1,7 @@
 <div>
 
     <div class="p-6 relative overflow-x-auto shadow-md sm:rounded-lg bg-white">
+         <h4 class="mt-4text-lg font-semibold text-gray-800 dark:text-white mb-4">Masa Aktif Dokument Kurang dari 3 Bulan</h4>
         <div class="px-4 py-3 mb-8 bg-white rounded-lg shadow-md dark:bg-gray-800">
             <input type="search" wire:model="search"
                 class="block w-full mt-1 text-sm border-blue-600 dark:text-gray-300 dark:bg-gray-700 focus:border-blue-400 focus:outline-none focus:shadow-outline-blue form-input"
@@ -11,7 +12,8 @@
                 </div>
             </div>
         </div>
-        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+       
+        <table class="mt-4 w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
                     <th scope="col" class="px-6 py-3">
