@@ -13,7 +13,7 @@ class DocumentForm extends Component
 {
     public $search = '';
     public $Id;
-    public $nama_dokument, $nomor_dokument, $dokument_jenis_id, $dokument_group_id, $keterangan;
+    public $nama_dokument, $nomor_dokument,  $masa_berlaku, $dokument_jenis_id, $dokument_group_id, $keterangan;
     public $aktif;
     public $editMode = false;
     public $stateId;
@@ -45,6 +45,7 @@ class DocumentForm extends Component
                 "data_file" => $path,
                 "dokument_jenis_id" => $this->dokument_jenis_id,
                 "dokument_group_id" => $this->dokument_group_id,
+                "masa_berlaku" => $this->masa_berlaku,
                 "keterangan" => $this->keterangan,
                 "users_id" => auth()->user()->id
             ]);

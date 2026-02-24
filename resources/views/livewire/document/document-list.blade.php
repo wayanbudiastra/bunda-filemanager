@@ -63,22 +63,22 @@
                         </td>
                         <td class="px-6 py-4 text-right">
                             <button wire:click="edit({{ $d->id }})"
-                                class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-md active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-blue">
-                                View</button>
+                                class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-red-600 border border-transparent rounded-md active:bg-red-600 hover:bg-red-700 focus:outline-none focus:shadow-outline-blue" title="View Dokument">
+                                 <i class="fas fa-fw fa-eye"></i></button>
                             @if (auth()->user()->dokumen_manager == 'Y')
                                 @if ($d->aktif == 'Y')
                                     <button wire:click="nonaktifkan({{ $d->id }})"
-                                        class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-md active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-blue">
-                                        Non-Aktifkan</button>
+                                        class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-md active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-blue" title="Non-Aktifkan Dokument">
+                                         <i class="fas fa-fw fa-times"></i></button>
                                 @else
                                     <button wire:click="aktifkan({{ $d->id }})"
-                                        class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-md active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-blue">
-                                        Aktifkan</button>
+                                        class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-green-600 border border-transparent rounded-md active:bg-green-600 hover:bg-green-700 focus:outline-none focus:shadow-outline-blue" title="Non-Aktifkan Dokument">
+                                        <i class="fas fa-fw fa-check"></i></button>
                                 @endif
 
-                                {{-- <button wire:click="edit({{ $d->id }})"
-                                    class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-md active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue">
-                                    Update</button> --}}
+                                <button wire:click="update_data({{ $d->id }})"
+                                    class="px-3 py-1 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-blue-600 border border-transparent rounded-md active:bg-blue-600 hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue" title="Non-Aktifkan Dokument">
+                                    <i class="fas fa-fw fa-pencil"></i></button>
                             @endif
                         </td>
                     </tr>

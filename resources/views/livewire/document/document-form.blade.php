@@ -115,6 +115,17 @@
                 @enderror
             </label>
             <label class="block text-sm mt-4">
+                <span class="text-gray-700 dark:text-gray-400">Masa Berlaku</span>
+                <input type="date" name="masa_berlaku" wire:model.defer="masa_berlaku"
+                    class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-gray form-input"
+                    placeholder="Masa Berlaku" />
+                @error('masa_berlaku')
+                    <div class="mb-2 text-sm text-red-700  rounded-lg dark:bg-red-200 dark:text-red-800" role="alert">
+                        <span class="font-medium"></span>{{ $message }}
+                    </div>
+                @enderror
+            </label>
+            <label class="block text-sm mt-4">
                 <span class="text-gray-700 dark:text-gray-400">Keterangan</span>
                 <textarea name="keterangan" wire:model.defer="keterangan"
                     class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-green-400 focus:outline-none focus:shadow-outline-green dark:text-gray-300 dark:focus:shadow-outline-gray form-input"

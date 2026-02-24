@@ -20,6 +20,11 @@ class DocumentList extends Component
         return redirect()->to('/document-view/' . $id);
     }
 
+       public function update_data($id)
+    {
+        return redirect()->to('/document-update/' . $id);
+    }
+
     public function aktifkan($id)
     {
         $data = Dokument::find($id);
